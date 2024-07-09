@@ -65,3 +65,21 @@ function ui:Window(display, title, options)
     titleBarCloseButton.Texture = "corner2"
     return baseInput
 end
+
+function ui:Frame(parent, col, row, options)
+    local defaultOptions = {}
+    local dlgFrame = baseInput:Append("DialogFrame")
+    defaultOptions.H = "100%"
+    defaultOptions.W = "100%"
+    defaultOptions.Columns = col
+    defaultOptions.Rows = row
+    defaultOptions.Anchors = {
+        left = 0,
+        right = 0,
+        top = 1,
+        bottom = 1
+    }
+    defaultOptions.name = "dlgFrame"
+    ui:mergeOptions(defaultOptions, options)
+    return ui:createUiElement(parent, "DialogFrame", defaultOptions)
+end
