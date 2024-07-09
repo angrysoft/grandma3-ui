@@ -28,19 +28,22 @@ function ui:Window(display, title, options)
 
     -- Main Window.
     local dialogWidth = 650
-    local baseInput = screenOverlay:Append("BaseInput")
-    baseInput.Name = "FadeDelay"
-    baseInput.H = "0"
-    baseInput.W = dialogWidth
-    baseInput.MaxSize = string.format("%s,%s", display.W * 0.8, display.H)
-    baseInput.MinSize = string.format("%s,0", dialogWidth - 100)
-    baseInput.Columns = 1
-    baseInput.Rows = 2
-    baseInput[1][1].SizePolicy = "Fixed"
-    baseInput[1][1].Size = "60"
-    baseInput[1][2].SizePolicy = "Content"
-    baseInput.AutoClose = "No"
-    baseInput.CloseOnEscape = "Yes"
+    local defaultOptions = {}
+    defaultOptions.Name = "FadeDelay"
+    defaultOptions.H = "0"
+    defaultOptions.W = dialogWidth
+    defaultOptions.MaxSize = string.format("%s,%s", display.W * 0.8, display.H)
+    defaultOptions.MinSize = string.format("%s,0", dialogWidth - 100)
+    defaultOptions.Columns = 1
+    defaultOptions.Rows = 2
+    defaultOptions[1][1].SizePolicy = "Fixed"
+    defaultOptions[1][1].Size = "60"
+    defaultOptions[1][2].SizePolicy = "Content"
+    defaultOptions.AutoClose = "No"
+    defaultOptions.CloseOnEscape = "Yes"
+
+    ui:mergeOptions(defaultOptions, options)
+    local baseInput = ui:createUiElement(screenOverlay, "BaseInput", defaultOptions)
 
     -- title bar.
     local titleBar = baseInput:Append("TitleBar")
@@ -60,4 +63,5 @@ function ui:Window(display, title, options)
     local titleBarCloseButton = titleBar:Append("CloseButton")
     titleBarCloseButton.Anchors = "1,0"
     titleBarCloseButton.Texture = "corner2"
+    return baseInput
 end
