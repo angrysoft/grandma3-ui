@@ -1,6 +1,6 @@
 {
   "name": "grandma3-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper functions for building ui in GrandMa3 plugins",
   "main": "./dist/index.js",
 "module": "./dist/index.mjs",
