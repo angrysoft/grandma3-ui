@@ -1,0 +1,32 @@
+{
+  "name": "grandma3-ui",
+  "version": "1.0.3",
+  "description": "Helper functions for building ui in GrandMa3 plugins",
+  "main": "./dist/index.js",
+"module": "./dist/index.mjs",
+"types": "./dist/index.d.ts",
+"files": [
+    "dist"
+ ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/angrysoft/grandma3-ui.git"
+  },
+  "keywords": [
+    "Grandma3"
+  ],
+  "author": "Angrysoft < Sebastian Zwierzchowski>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/angrysoft/grandma3-ui/issues"
+  },
+  "homepage": "https://github.com/angrysoft/grandma3-ui#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "typescript": "^5.5.3"
+  }
+}
