@@ -20,7 +20,7 @@ export function mergeOptions(defaultOptions: any, options: Options): void;
 export function createUiElement(
   parent: UiElement,
   elementType: ElementType,
-  options: Options,
+  options?: Options,
 ): UiElement;
 
 export function Window(
@@ -28,5 +28,5 @@ export function Window(
   title: string,
   w: number,
   h: number,
-  options: any,
+  options?: any,
 ): UiElement;

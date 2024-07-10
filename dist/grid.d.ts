@@ -4,5 +4,5 @@ export function Grid(
   parent: UiElement,
   col: number,
   row: number,
-  options: Options,
+  options?: Options,
 ): UiElement;

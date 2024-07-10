@@ -5,5 +5,5 @@ type SwipeItem = { [key: string]: any };
 export function SwipeButton(
   parent: UiElement,
   itemsList: SwipeItem[],
-  options: Options,
+  options?: Options,
 );
