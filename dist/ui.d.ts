@@ -16,7 +16,7 @@ interface UiElement {
   Append(element: ElementType): UiElement;
   [key: string]: any;
 }
-export function mergeOptions(defaultOptions: any, options: Options): void;
+export function mergeOptions(defaultOptions: Options, options: Options): void;
 export function createUiElement(
   parent: UiElement,
   elementType: ElementType,
@@ -30,3 +30,11 @@ export function Window(
   h: number,
   options?: any,
 ): UiElement;
+
+export function Frame(
+  parent: UiElement,
+  col: number,
+  row: number,
+  options?: Options,
+): UiElement;
+
