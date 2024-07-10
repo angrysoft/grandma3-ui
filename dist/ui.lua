@@ -21,19 +21,18 @@ function ui:createUiElement(parent, elementType, options)
     return element
 end
 
-function ui:Window(display, title, options)
+function ui:Window(display, title, w, h, options)
     local screenOverlay = display.ScreenOverlay
     screenOverlay:ClearUIChildren()
 
 
     -- Main Window.
-    local dialogWidth = 650
     local defaultOptions = {}
     defaultOptions.Name = "FadeDelay"
-    defaultOptions.H = "0"
-    defaultOptions.W = dialogWidth
+    defaultOptions.H = h
+    defaultOptions.W = w
     defaultOptions.MaxSize = string.format("%s,%s", display.W * 0.8, display.H)
-    defaultOptions.MinSize = string.format("%s,0", dialogWidth - 100)
+    defaultOptions.MinSize = string.format("%s,0", defaultOptions.W - 100)
     defaultOptions.Columns = 1
     defaultOptions.Rows = 2
     defaultOptions[1][1].SizePolicy = "Fixed"
@@ -63,12 +62,12 @@ function ui:Window(display, title, options)
     local titleBarCloseButton = titleBar:Append("CloseButton")
     titleBarCloseButton.Anchors = "1,0"
     titleBarCloseButton.Texture = "corner2"
+
     return baseInput
 end
 
 function ui:Frame(parent, col, row, options)
     local defaultOptions = {}
-    local dlgFrame = baseInput:Append("DialogFrame")
     defaultOptions.H = "100%"
     defaultOptions.W = "100%"
     defaultOptions.Columns = col

@@ -1,7 +1,9 @@
-import { UiElement } from "./ui";
+import { Options, UiElement } from "./ui";
+
 type SwipeItem = { [key: string]: any };
+
 export function SwipeButton(
   parent: UiElement,
   itemsList: SwipeItem[],
-  options: any,
+  options: Options,
 );

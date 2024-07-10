@@ -1,3 +1,3 @@
-import { ElementType, UiElement } from "./ui";
+import { ElementType, Options, UiElement } from "./ui";
 
-export function Input(parent:UiElement, options:any): UiElement;
+export function Input(parent:UiElement, options:Options): UiElement;

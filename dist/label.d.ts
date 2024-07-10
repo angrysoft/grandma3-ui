@@ -1,3 +1,3 @@
-import { ElementType, UiElement } from "./ui";
+import { ElementType, Options, UiElement } from "./ui";
 
-export function Label(parent:UiElement, text:ElementType, options:any): UiElement;
+export function Label(parent:UiElement, text:ElementType, options:Options): UiElement;

@@ -1,3 +1,3 @@
-import { UiElement } from "./ui";
+import { Options, UiElement } from "./ui";
 
-export function Button(parent: UiElement, text: string, options: any): UiElement;
+export function Button(parent: UiElement, text: string, options: Options): UiElement;

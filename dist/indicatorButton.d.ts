@@ -1,7 +1,7 @@
 import { Options, UiElement } from "./ui";
 
-export function IconButton(
+export function IndicatorButton(
   parent: UiElement,
-  iconName: string,
+  text: string,
   options: Options,
 ): UiElement;
